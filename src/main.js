@@ -12,7 +12,7 @@ import ProLayout, { PageHeaderWrapper } from '@ant-design-vue/pro-layout'
 import themePluginConfig from '../config/themePluginConfig'
 
 // mock
-// WARNING: `mockjs` NOT SUPPORT `IE` PLEASE DO NOT USE IN `production` ENV.
+// WARNING: mockjs不支持IE，请不要在生产环境使用
 import './mock'
 
 import bootstrap from './core/bootstrap'

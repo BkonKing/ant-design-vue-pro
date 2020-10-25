@@ -25,7 +25,6 @@ export default {
     }
   },
   created () {
-    this.$store.dispatch('GenerateRoutes', { token: '' })
   }
 }
 </script>
