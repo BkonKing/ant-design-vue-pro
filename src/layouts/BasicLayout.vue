@@ -10,12 +10,11 @@
     v-bind="settings"
   >
 
-    <!-- 1.0.0+ 版本 pro-layout 提供 API，
-          我们推荐使用这种方式进行 LOGO 和 title 自定义
-    -->
+    <!-- LOGO 和 title 自定义  -->
     <template v-slot:menuHeaderRender>
       <div>
-        <logo-svg />
+        <!-- <logo-svg /> -->
+        <img src="~@/assets/logo.png" class="logo" alt="logo">
         <h1>{{ title }}</h1>
       </div>
     </template>
@@ -40,8 +39,8 @@ import { CONTENT_WIDTH_TYPE, SIDEBAR_TYPE, TOGGLE_MOBILE_TYPE } from '@/store/mu
 import defaultSettings from '@/config/defaultSettings'
 import RightContent from '@/components/GlobalHeader/RightContent'
 import GlobalFooter from '@/components/GlobalFooter'
-import Ads from '@/components/Other/CarbonAds'
-import LogoSvg from '../assets/logo.svg?inline'
+// import Ads from '@/components/Other/CarbonAds'
+// import LogoSvg from '../assets/logo.svg?inline'
 import { getMenu } from '@/api/user'
 
 export default {
@@ -49,9 +48,9 @@ export default {
   components: {
     SettingDrawer,
     RightContent,
-    GlobalFooter,
-    LogoSvg,
-    Ads
+    GlobalFooter
+    // LogoSvg,
+    // Ads
   },
   data () {
     return {

@@ -844,16 +844,27 @@ const userNav = options => {
 const menu = options => {
   const menuArray = [
     {
+      'id': '1',
+      'parent_id': '0',
+      'path': '/system',
+      'meta': {
+        'title': '系统管理',
+        'icon': 'https://test.tosolomo.com//library/bootstrap/img/logo/logo-bs4.png'
+      },
+      'children': [{
+          'id': '2',
+          'parent_id': '1',
+          'path': '/system/admin/getAdminList',
+          'meta': {
+            'title': '管理用户',
+            'icon': 'https://test.tosolomo.com//library/bootstrap/img/logo/logo-bs4.png'
+          }
+      }]
+    },
+    {
       path: '/dashboard',
       name: 'dashboard',
       redirect: '/dashboard/workplace',
-      component: {
-        _custom: {
-          type: 'component-definition',
-          display: 'RouteView',
-          tooltip: 'Component definition'
-        }
-      },
       meta: {
         title: 'menu.dashboard',
         keepAlive: true,
@@ -883,22 +894,8 @@ const menu = options => {
           }
         },
         {
-          path: 'https://www.baidu.com/',
-          name: 'Monitor',
-          meta: {
-            title: 'menu.dashboard.monitor',
-            target: '_blank'
-          }
-        },
-        {
           path: '/dashboard/workplace',
           name: 'Workplace',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: 'menu.dashboard.workplace',
             keepAlive: true,
@@ -910,13 +907,6 @@ const menu = options => {
     {
       path: '/form',
       redirect: '/form/base-form',
-      component: {
-        _custom: {
-          type: 'component-definition',
-          display: 'RouteView',
-          tooltip: 'Component definition'
-        }
-      },
       meta: {
         title: '表单页',
         icon: 'form',
@@ -926,12 +916,6 @@ const menu = options => {
         {
           path: '/form/base-form',
           name: 'BaseForm',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '基础表单',
             keepAlive: true,
@@ -941,12 +925,6 @@ const menu = options => {
         {
           path: '/form/step-form',
           name: 'StepForm',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '分步表单',
             keepAlive: true,
@@ -956,12 +934,6 @@ const menu = options => {
         {
           path: '/form/advanced-form',
           name: 'AdvanceForm',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '高级表单',
             keepAlive: true,
@@ -973,13 +945,6 @@ const menu = options => {
     {
       path: '/list',
       name: 'list',
-      component: {
-        _custom: {
-          type: 'component-definition',
-          display: 'RouteView',
-          tooltip: 'Component definition'
-        }
-      },
       redirect: '/list/table-list',
       meta: {
         title: '列表页',
@@ -991,12 +956,6 @@ const menu = options => {
           path: '/list/table-list/:pageNo([1-9]\\d*)?',
           name: 'TableListWrapper',
           hideChildrenInMenu: true,
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '查询表格',
             keepAlive: true,
@@ -1006,12 +965,6 @@ const menu = options => {
         {
           path: '/list/basic-list',
           name: 'BasicList',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '标准列表',
             keepAlive: true,
@@ -1021,12 +974,6 @@ const menu = options => {
         {
           path: '/list/card',
           name: 'CardList',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '卡片列表',
             keepAlive: true,
@@ -1036,12 +983,6 @@ const menu = options => {
         {
           path: '/list/search',
           name: 'SearchList',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           redirect: '/list/search/article',
           meta: {
             title: '搜索列表',
@@ -1052,12 +993,6 @@ const menu = options => {
             {
               path: '/list/search/article',
               name: 'SearchArticles',
-              component: {
-                _custom: {
-                  type: 'function',
-                  display: '<span>ƒ</span> component()'
-                }
-              },
               meta: {
                 title: '搜索列表（文章）',
                 permission: ['table']
@@ -1066,12 +1001,6 @@ const menu = options => {
             {
               path: '/list/search/project',
               name: 'SearchProjects',
-              component: {
-                _custom: {
-                  type: 'function',
-                  display: '<span>ƒ</span> component()'
-                }
-              },
               meta: {
                 title: '搜索列表（项目）',
                 permission: ['table']
@@ -1080,12 +1009,6 @@ const menu = options => {
             {
               path: '/list/search/application',
               name: 'SearchApplications',
-              component: {
-                _custom: {
-                  type: 'function',
-                  display: '<span>ƒ</span> component()'
-                }
-              },
               meta: {
                 title: '搜索列表（应用）',
                 permission: ['table']
@@ -1098,13 +1021,6 @@ const menu = options => {
     {
       path: '/profile',
       name: 'profile',
-      component: {
-        _custom: {
-          type: 'component-definition',
-          display: 'RouteView',
-          tooltip: 'Component definition'
-        }
-      },
       redirect: '/profile/basic',
       meta: {
         title: '详情页',
@@ -1115,12 +1031,6 @@ const menu = options => {
         {
           path: '/profile/basic',
           name: 'ProfileBasic',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '基础详情页',
             permission: ['profile']
@@ -1129,12 +1039,6 @@ const menu = options => {
         {
           path: '/profile/advanced',
           name: 'ProfileAdvanced',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '高级详情页',
             permission: ['profile']
@@ -1145,13 +1049,6 @@ const menu = options => {
     {
       path: '/result',
       name: 'result',
-      component: {
-        _custom: {
-          type: 'component-definition',
-          display: 'RouteView',
-          tooltip: 'Component definition'
-        }
-      },
       redirect: '/result/success',
       meta: {
         title: '结果页',
@@ -1162,12 +1059,6 @@ const menu = options => {
         {
           path: '/result/success',
           name: 'ResultSuccess',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '成功',
             keepAlive: false,
@@ -1178,12 +1069,6 @@ const menu = options => {
         {
           path: '/result/fail',
           name: 'ResultFail',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '失败',
             keepAlive: false,
@@ -1196,13 +1081,6 @@ const menu = options => {
     {
       path: '/exception',
       name: 'exception',
-      component: {
-        _custom: {
-          type: 'component-definition',
-          display: 'RouteView',
-          tooltip: 'Component definition'
-        }
-      },
       redirect: '/exception/403',
       meta: {
         title: '异常页',
@@ -1213,12 +1091,6 @@ const menu = options => {
         {
           path: '/exception/403',
           name: 'Exception403',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '403',
             permission: ['exception']
@@ -1227,12 +1099,6 @@ const menu = options => {
         {
           path: '/exception/404',
           name: 'Exception404',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '404',
             permission: ['exception']
@@ -1241,12 +1107,6 @@ const menu = options => {
         {
           path: '/exception/500',
           name: 'Exception500',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '500',
             permission: ['exception']
@@ -1256,13 +1116,6 @@ const menu = options => {
     },
     {
       path: '/account',
-      component: {
-        _custom: {
-          type: 'component-definition',
-          display: 'RouteView',
-          tooltip: 'Component definition'
-        }
-      },
       redirect: '/account/center',
       name: 'account',
       meta: {
@@ -1275,12 +1128,6 @@ const menu = options => {
         {
           path: '/account/center',
           name: 'center',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '个人中心',
             keepAlive: true,
@@ -1290,12 +1137,6 @@ const menu = options => {
         {
           path: '/account/settings',
           name: 'settings',
-          component: {
-            _custom: {
-              type: 'function',
-              display: '<span>ƒ</span> component()'
-            }
-          },
           meta: {
             title: '个人设置',
             hideHeader: true,
@@ -1307,12 +1148,6 @@ const menu = options => {
             {
               path: '/account/settings/base',
               name: 'BaseSettings',
-              component: {
-                _custom: {
-                  type: 'function',
-                  display: '<span>ƒ</span> component()'
-                }
-              },
               meta: {
                 title: '基本设置',
                 hidden: true,
@@ -1322,12 +1157,6 @@ const menu = options => {
             {
               path: '/account/settings/security',
               name: 'SecuritySettings',
-              component: {
-                _custom: {
-                  type: 'function',
-                  display: '<span>ƒ</span> component()'
-                }
-              },
               meta: {
                 title: '安全设置',
                 hidden: true,
@@ -1338,12 +1167,6 @@ const menu = options => {
             {
               path: '/account/settings/custom',
               name: 'CustomSettings',
-              component: {
-                _custom: {
-                  type: 'function',
-                  display: '<span>ƒ</span> component()'
-                }
-              },
               meta: {
                 title: '个性化设置',
                 hidden: true,
@@ -1354,12 +1177,6 @@ const menu = options => {
             {
               path: '/account/settings/binding',
               name: 'BindingSettings',
-              component: {
-                _custom: {
-                  type: 'function',
-                  display: '<span>ƒ</span> component()'
-                }
-              },
               meta: {
                 title: '账户绑定',
                 hidden: true,
@@ -1370,12 +1187,6 @@ const menu = options => {
             {
               path: '/account/settings/notification',
               name: 'NotificationSettings',
-              component: {
-                _custom: {
-                  type: 'function',
-                  display: '<span>ƒ</span> component()'
-                }
-              },
               meta: {
                 title: '新消息通知',
                 hidden: true,
