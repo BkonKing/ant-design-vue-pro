@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { GlobalFooter } from '@ant-design-vue/pro-layout'
+import { GlobalFooter } from 'xx-ant-design-vue-pro-layout'
 
 export default {
   name: 'ProGlobalFooter',

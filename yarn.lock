@@ -2,20 +2,6 @@
 # yarn lockfile v1
 
 
-"@ant-design-vue/pro-layout@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@ant-design-vue/pro-layout/-/pro-layout-1.0.1.tgz#8b87ba5e1179c5809e7988fb46f4333e852f7b2f"
-  integrity sha512-6mA0fd7d1SysVoEttn9/NGaY5OuB8mzcEuwWOpDsT3fjCuo7DJD3JoscRP2yFR6FAV2o7E06dc/vJlyLT5GCIg==
-  dependencies:
-    ant-design-vue "^1.6.2"
-    classnames "^2.2.6"
-    insert-css "^2.0.0"
-    lodash "^4.17.15"
-    omit.js "^1.0.2"
-    umi-request "^1.2.11"
-    vue-container-query "^0.1.0"
-    vue-copy-to-clipboard "^1.0.3"
-
 "@ant-design/colors@^3.1.0", "@ant-design/colors@^3.2.1":
   version "3.2.2"
   resolved "https://registry.npm.taobao.org/@ant-design/colors/download/@ant-design/colors-3.2.2.tgz#5ad43d619e911f3488ebac303d606e66a8423903"
@@ -11350,6 +11336,20 @@ xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"
   resolved "https://registry.npm.taobao.org/xtend/download/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha1-u3J3n1+kZRhrH0OPZ0+jR/2121Q=
+
+xx-ant-design-vue-pro-layout@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/xx-ant-design-vue-pro-layout/-/xx-ant-design-vue-pro-layout-1.0.2.tgz#02fe1ec23ffa06b981472cc74dcfbe67195b5a9f"
+  integrity sha512-iTpaOT6Br1bTCSvX/1dOuQvWPnL75zkGRjdtzNsnRrhocu6Gse2ynBBXCu0zH/O+63kB3Zr+YL3jwlCVMrD9Yg==
+  dependencies:
+    ant-design-vue "^1.6.2"
+    classnames "^2.2.6"
+    insert-css "^2.0.0"
+    lodash "^4.17.15"
+    omit.js "^1.0.2"
+    umi-request "^1.2.11"
+    vue-container-query "^0.1.0"
+    vue-copy-to-clipboard "^1.0.3"
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
