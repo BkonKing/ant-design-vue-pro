@@ -10,11 +10,9 @@ import {
   TOGGLE_HIDE_HEADER,
   TOGGLE_COLOR,
   TOGGLE_WEAK,
-  TOGGLE_MULTI_TAB,
+  TOGGLE_MULTI_TAB
   // i18n
-  APP_LANGUAGE
 } from '@/store/mutation-types'
-import { loadLanguageAsync } from '@/locales'
 
 const app = {
   state: {
@@ -29,7 +27,6 @@ const app = {
     color: '',
     weak: false,
     multiTab: true,
-    lang: 'en-US',
     _antLocale: {}
   },
   mutations: {
@@ -72,28 +69,12 @@ const app = {
       state.weak = mode
       storage.set(TOGGLE_WEAK, mode)
     },
-    [APP_LANGUAGE]: (state, lang, antd = {}) => {
-      state.lang = lang
-      state._antLocale = antd
-      storage.set(APP_LANGUAGE, lang)
-    },
     [TOGGLE_MULTI_TAB]: (state, bool) => {
       storage.set(TOGGLE_MULTI_TAB, bool)
       state.multiTab = bool
     }
   },
-  actions: {
-    setLang ({ commit }, lang) {
-      return new Promise((resolve, reject) => {
-        commit(APP_LANGUAGE, lang)
-        loadLanguageAsync(lang).then(() => {
-          resolve()
-        }).catch((e) => {
-          reject(e)
-        })
-      })
-    }
-  }
+  actions: {}
 }
 
 export default app
