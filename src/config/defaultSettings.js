@@ -21,7 +21,7 @@ export default {
   fixSiderbar: false, // sticky siderbar
   colorWeak: false,
   menu: {
-    locale: true
+    locale: false
   },
   title: '美好生活家园',
   pwa: false,

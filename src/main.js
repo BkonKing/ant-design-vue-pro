@@ -14,11 +14,11 @@ import themePluginConfig from '../config/themePluginConfig'
 // WARNING: mockjs不支持IE，请不要在生产环境使用
 import './mock'
 
-import bootstrap from './core/bootstrap'
-import './core/lazy_use' // use lazy load components
-import './permission' // permission control
-import './utils/filter' // global filter
-import './global.less' // global style
+import bootstrap from './core/bootstrap' // localstorage赋值到vuex
+import './core/lazy_use' // 懒加载组件
+import './permission' // 权限控制
+import './utils/filter' // 全局filter
+import './global.less' // 全局样式
 
 Vue.config.productionTip = false
 
@@ -34,7 +34,7 @@ window.umi_plugin_ant_themeVar = themePluginConfig.theme
 new Vue({
   router,
   store,
-  // init localstorage, vuex
+  // 初始化 localstorage, vuex
   created: bootstrap,
   render: h => h(App)
 }).$mount('#app')
